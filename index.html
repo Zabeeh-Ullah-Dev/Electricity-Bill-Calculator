@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Bill Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="icon">⚡</div>
+
+        <h1>Electricity Bill</h1>
+        <p class="subtitle">
+            Enter your electricity units to calculate your bill
+        </p>
+
+        <form id="billForm">
+
+            <label for="units">Units Used</label>
+
+            <div class="input-box">
+                <input
+                    type="number"
+                    id="units"
+                    placeholder="Enter units"
+                    min="0"
+                    step="any"
+                    required
+                    aria-describedby="error"
+                >
+                <span>Units</span>
+            </div>
+
+            <p class="error" id="error" role="alert">
+                Please enter a valid number of units.
+            </p>
+
+            <button type="submit">
+                Calculate Bill
+            </button>
+
+        </form>
+
+        <div class="result" id="result" aria-live="polite">
+
+            <div class="result-row">
+                <span>Units Used</span>
+                <strong id="displayUnits">0</strong>
+            </div>
+
+            <div class="result-row">
+                <span>Slab calculation</span>
+                <strong id="displayRate">-</strong>
+            </div>
+
+            <div class="total">
+                <span>Total Bill</span>
+
+                <span class="amount">
+                    Rs. <span id="totalAmount">0</span>
+                </span>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            Simple • Fast • Easy to Use
+        </div>
+
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
